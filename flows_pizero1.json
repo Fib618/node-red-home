@@ -4142,10 +4142,10 @@
         "routineNode": {
             "type": "speak",
             "payload": {
-                "type": "announcement",
+                "type": "ssml",
                 "text": {
-                    "type": "str",
-                    "value": "test"
+                    "type": "ssml",
+                    "value": "<speak>\t    数字を基数として <w role=\"amazon:VBD\">読み上げます</w> \t    ： \t    <say-as interpret-as=\"cardinal\">12345</say-as>。\t    単語をスペルアウトします： \t    <say-as interpret-as=\"spell-out\">hello</say-as>。\t</speak>"
                 },
                 "devices": [
                     "G090QU068017010B"
