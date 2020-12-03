@@ -4145,7 +4145,7 @@
                 "type": "regular",
                 "text": {
                     "type": "str",
-                    "value": "テスト"
+                    "value": "【ニューヨーク共同】3日のニューヨーク株式市場のダウ工業株30種平均は続伸して始まり、一時、節目の3万ドルを超えた。新型コロナウイルス感染症のワクチン実用化への期待が継続し、買いが先行した。"
                 },
                 "devices": [
                     "G090QU068017010B"
@@ -4226,7 +4226,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 160,
-        "y": 760,
+        "y": 740,
         "wires": [
             [
                 "92b6204.d4716e"
@@ -4245,8 +4245,21 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 430,
-        "y": 800,
+        "x": 510,
+        "y": 740,
         "wires": []
+    },
+    {
+        "id": "36924ff0.b883",
+        "type": "alexa-remote-init",
+        "z": "957aa787.9c64e8",
+        "name": "",
+        "account": "",
+        "option": "initialise",
+        "x": 250,
+        "y": 660,
+        "wires": [
+            []
+        ]
     }
 ]
