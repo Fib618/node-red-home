@@ -4142,9 +4142,9 @@
         "routineNode": {
             "type": "speak",
             "payload": {
-                "type": "ssml",
+                "type": "announcement",
                 "text": {
-                    "type": "ssml",
+                    "type": "str",
                     "value": "test"
                 },
                 "devices": [
