@@ -4140,19 +4140,24 @@
         "name": "",
         "account": "318272e.dcf2b8e",
         "routineNode": {
-            "type": "speak",
+            "type": "speakAtVolume",
             "payload": {
-                "type": "ssml",
+                "type": "regular",
                 "text": {
-                    "type": "ssml",
-                    "value": "<speak>\t    数字を基数として <w role=\"amazon:VBD\">読み上げます</w> \t    ： \t    <say-as interpret-as=\"cardinal\">12345</say-as>。\t    単語をスペルアウトします： \t    <say-as interpret-as=\"spell-out\">hello</say-as>。\t</speak>"
+                    "type": "str",
+                    "value": "これは音量50でしゃべっています。"
                 },
+                "volume": {
+                    "type": "num",
+                    "value": "50"
+                },
+                "mode": "set",
                 "devices": [
                     "G090QU068017010B"
                 ]
             }
         },
-        "x": 400,
+        "x": 430,
         "y": 560,
         "wires": [
             [
