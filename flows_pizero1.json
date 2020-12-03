@@ -1528,6 +1528,15 @@
         "type": "inject",
         "z": "ea374b70.7ba088",
         "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": false,
@@ -4362,5 +4371,22 @@
         "x": 730,
         "y": 520,
         "wires": []
+    },
+    {
+        "id": "5da0f07a.8a5ed",
+        "type": "http in",
+        "z": "ea374b70.7ba088",
+        "name": "",
+        "url": "/tv/on",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 1180,
+        "wires": [
+            [
+                "8044e308.493e9"
+            ]
+        ]
     }
 ]
