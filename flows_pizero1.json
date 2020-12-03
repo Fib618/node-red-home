@@ -4148,7 +4148,7 @@
                     "value": "テスト"
                 },
                 "devices": [
-                    ""
+                    "amaEcho"
                 ]
             }
         },
@@ -4156,6 +4156,35 @@
         "y": 560,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "17d9d417.05c1ac",
+        "type": "inject",
+        "z": "957aa787.9c64e8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 560,
+        "wires": [
+            [
+                "e58857a8.3ddb38"
+            ]
         ]
     }
 ]
