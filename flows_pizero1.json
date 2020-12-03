@@ -4140,28 +4140,19 @@
         "name": "",
         "account": "318272e.dcf2b8e",
         "routineNode": {
-            "type": "speakAtVolume",
+            "type": "wait",
             "payload": {
-                "type": "regular",
-                "text": {
-                    "type": "str",
-                    "value": "これは音量10でしゃべっています。"
-                },
-                "volume": {
+                "time": {
                     "type": "num",
-                    "value": "10"
-                },
-                "mode": "set",
-                "devices": [
-                    "G090QU068017010B"
-                ]
+                    "value": "3"
+                }
             }
         },
-        "x": 430,
+        "x": 390,
         "y": 560,
         "wires": [
             [
-                "a9736693.a8cd38"
+                "944f761d.657918"
             ]
         ]
     },
@@ -4268,8 +4259,35 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 650,
+        "x": 750,
         "y": 560,
         "wires": []
+    },
+    {
+        "id": "944f761d.657918",
+        "type": "alexa-remote-routine",
+        "z": "957aa787.9c64e8",
+        "name": "",
+        "account": "318272e.dcf2b8e",
+        "routineNode": {
+            "type": "speak",
+            "payload": {
+                "type": "regular",
+                "text": {
+                    "type": "str",
+                    "value": "3秒待ちました。"
+                },
+                "devices": [
+                    "G090QU068017010B"
+                ]
+            }
+        },
+        "x": 560,
+        "y": 560,
+        "wires": [
+            [
+                "a9736693.a8cd38"
+            ]
+        ]
     }
 ]
