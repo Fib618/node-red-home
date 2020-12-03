@@ -4134,29 +4134,6 @@
         ]
     },
     {
-        "id": "e58857a8.3ddb38",
-        "type": "alexa-remote-routine",
-        "z": "957aa787.9c64e8",
-        "name": "",
-        "account": "318272e.dcf2b8e",
-        "routineNode": {
-            "type": "wait",
-            "payload": {
-                "time": {
-                    "type": "num",
-                    "value": "10"
-                }
-            }
-        },
-        "x": 390,
-        "y": 560,
-        "wires": [
-            [
-                "944f761d.657918"
-            ]
-        ]
-    },
-    {
         "id": "17d9d417.05c1ac",
         "type": "inject",
         "z": "957aa787.9c64e8",
@@ -4181,7 +4158,7 @@
         "y": 560,
         "wires": [
             [
-                "e58857a8.3ddb38"
+                "944f761d.657918"
             ]
         ]
     },
@@ -4275,7 +4252,7 @@
                 "type": "regular",
                 "text": {
                     "type": "str",
-                    "value": "3秒待ちました。"
+                    "value": "これからいくつかの単語を読み上げます。"
                 },
                 "devices": [
                     "G090QU068017010B"
@@ -4287,6 +4264,73 @@
         "wires": [
             [
                 "a9736693.a8cd38"
+            ]
+        ]
+    },
+    {
+        "id": "19bc5f4d.e8ba01",
+        "type": "debug",
+        "z": "957aa787.9c64e8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 750,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "6205b333.9f732c",
+        "type": "alexa-remote-routine",
+        "z": "957aa787.9c64e8",
+        "name": "",
+        "account": "318272e.dcf2b8e",
+        "routineNode": {
+            "type": "stop",
+            "payload": {
+                "devices": [
+                    "G090QU068017010B"
+                ]
+            }
+        },
+        "x": 550,
+        "y": 620,
+        "wires": [
+            [
+                "19bc5f4d.e8ba01"
+            ]
+        ]
+    },
+    {
+        "id": "7a728e04.1c4ce",
+        "type": "inject",
+        "z": "957aa787.9c64e8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 620,
+        "wires": [
+            [
+                "6205b333.9f732c"
             ]
         ]
     }
