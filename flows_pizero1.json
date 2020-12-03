@@ -4140,19 +4140,19 @@
         "name": "",
         "account": "318272e.dcf2b8e",
         "routineNode": {
-            "type": "pushNotification",
+            "type": "speak",
             "payload": {
+                "type": "regular",
                 "text": {
                     "type": "str",
-                    "value": "Hello from Alexa Remote!"
+                    "value": "test"
                 },
-                "title": {
-                    "type": "str",
-                    "value": "Node-RED"
-                }
+                "devices": [
+                    "G090QU068017010B"
+                ]
             }
         },
-        "x": 430,
+        "x": 400,
         "y": 560,
         "wires": [
             [
