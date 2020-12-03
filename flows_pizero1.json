@@ -4145,11 +4145,11 @@
                 "type": "regular",
                 "text": {
                     "type": "str",
-                    "value": "これは音量50でしゃべっています。"
+                    "value": "これは音量10でしゃべっています。"
                 },
                 "volume": {
                     "type": "num",
-                    "value": "50"
+                    "value": "10"
                 },
                 "mode": "set",
                 "devices": [
