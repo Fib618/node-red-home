@@ -4155,7 +4155,9 @@
         "x": 430,
         "y": 560,
         "wires": [
-            []
+            [
+                "a9736693.a8cd38"
+            ]
         ]
     },
     {
@@ -4247,6 +4249,22 @@
         "statusType": "auto",
         "x": 510,
         "y": 740,
+        "wires": []
+    },
+    {
+        "id": "a9736693.a8cd38",
+        "type": "debug",
+        "z": "957aa787.9c64e8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 650,
+        "y": 560,
         "wires": []
     }
 ]
