@@ -4247,12 +4247,11 @@
         "name": "",
         "account": "318272e.dcf2b8e",
         "routineNode": {
-            "type": "speak",
+            "type": "prompt",
             "payload": {
-                "type": "regular",
-                "text": {
+                "type": {
                     "type": "str",
-                    "value": "これからいくつかの単語を読み上げます。"
+                    "value": "weather"
                 },
                 "devices": [
                     "G090QU068017010B"
