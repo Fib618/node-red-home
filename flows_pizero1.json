@@ -4381,11 +4381,28 @@
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 170,
-        "y": 1180,
+        "x": 160,
+        "y": 1120,
         "wires": [
             [
                 "8044e308.493e9"
+            ]
+        ]
+    },
+    {
+        "id": "6ebc5424.9cc59c",
+        "type": "http in",
+        "z": "ea374b70.7ba088",
+        "name": "",
+        "url": "/tv/off",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 1080,
+        "wires": [
+            [
+                "79a3c8fc.5bac28"
             ]
         ]
     }
