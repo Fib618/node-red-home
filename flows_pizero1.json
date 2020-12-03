@@ -4251,7 +4251,7 @@
             "payload": {
                 "type": {
                     "type": "str",
-                    "value": "weather"
+                    "value": "tellStory"
                 },
                 "devices": [
                     "G090QU068017010B"
