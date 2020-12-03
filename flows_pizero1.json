@@ -4148,7 +4148,7 @@
                     "value": "テスト"
                 },
                 "devices": [
-                    "amaEcho"
+                    "G090QU068017010B"
                 ]
             }
         },
@@ -4186,5 +4186,67 @@
                 "e58857a8.3ddb38"
             ]
         ]
+    },
+    {
+        "id": "92b6204.d4716e",
+        "type": "alexa-remote-list",
+        "z": "957aa787.9c64e8",
+        "name": "",
+        "account": "318272e.dcf2b8e",
+        "config": {
+            "option": "getLists"
+        },
+        "x": 350,
+        "y": 740,
+        "wires": [
+            [
+                "8b42d96b.f56688"
+            ]
+        ]
+    },
+    {
+        "id": "8b19dcd5.50d76",
+        "type": "inject",
+        "z": "957aa787.9c64e8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 760,
+        "wires": [
+            [
+                "92b6204.d4716e"
+            ]
+        ]
+    },
+    {
+        "id": "8b42d96b.f56688",
+        "type": "debug",
+        "z": "957aa787.9c64e8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 430,
+        "y": 800,
+        "wires": []
     }
 ]
