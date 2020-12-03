@@ -4247,11 +4247,12 @@
         "name": "",
         "account": "318272e.dcf2b8e",
         "routineNode": {
-            "type": "prompt",
+            "type": "speak",
             "payload": {
-                "type": {
+                "type": "regular",
+                "text": {
                     "type": "str",
-                    "value": "tellStory"
+                    "value": "テスト"
                 },
                 "devices": [
                     "G090QU068017010B"
@@ -4262,7 +4263,8 @@
         "y": 560,
         "wires": [
             [
-                "a9736693.a8cd38"
+                "a9736693.a8cd38",
+                "5f803274.48bb5c"
             ]
         ]
     },
@@ -4332,5 +4334,33 @@
                 "6205b333.9f732c"
             ]
         ]
+    },
+    {
+        "id": "a85f1672.ba54c8",
+        "type": "http in",
+        "z": "957aa787.9c64e8",
+        "name": "",
+        "url": "/echo",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 360,
+        "y": 520,
+        "wires": [
+            [
+                "944f761d.657918"
+            ]
+        ]
+    },
+    {
+        "id": "5f803274.48bb5c",
+        "type": "http response",
+        "z": "957aa787.9c64e8",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 730,
+        "y": 520,
+        "wires": []
     }
 ]
