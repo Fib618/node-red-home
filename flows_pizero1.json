@@ -4201,7 +4201,7 @@
         "id": "84311bf1.e55bc8",
         "type": "amazon-echo-hub",
         "z": "aa9b9fd8.032af",
-        "port": "80",
+        "port": "81",
         "processinput": 0,
         "discovery": true,
         "x": 240,
