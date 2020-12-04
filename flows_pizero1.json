@@ -4187,7 +4187,7 @@
         "id": "ff993e1b.bdde2",
         "type": "amazon-echo-device",
         "z": "aa9b9fd8.032af",
-        "name": "TV",
+        "name": "TV123",
         "topic": "",
         "x": 450,
         "y": 220,
