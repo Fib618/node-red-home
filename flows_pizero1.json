@@ -28,13 +28,6 @@
         "info": ""
     },
     {
-        "id": "a338e4a3.c0ffd8",
-        "type": "tab",
-        "label": "フロー 2",
-        "disabled": false,
-        "info": ""
-    },
-    {
         "id": "271425b4.b584fa",
         "type": "alexa-home-conf",
         "username": "amaEcho"
@@ -4191,38 +4184,38 @@
         ]
     },
     {
-        "id": "ffaeca36.d0a268",
+        "id": "45197fa0.32f9e",
         "type": "amazon-echo-device",
-        "z": "a338e4a3.c0ffd8",
+        "z": "aa9b9fd8.032af",
         "name": "TV123",
         "topic": "",
-        "x": 450,
-        "y": 140,
+        "x": 490,
+        "y": 100,
         "wires": [
             [
-                "73b730aa.ff429"
+                "ceeabf77.e5e98"
             ]
         ]
     },
     {
-        "id": "d920950b.940b38",
+        "id": "16b5fb53.1035e5",
         "type": "amazon-echo-hub",
-        "z": "a338e4a3.c0ffd8",
+        "z": "aa9b9fd8.032af",
         "port": "81",
         "processinput": 0,
         "discovery": true,
-        "x": 250,
-        "y": 140,
+        "x": 290,
+        "y": 100,
         "wires": [
             [
-                "ffaeca36.d0a268"
+                "45197fa0.32f9e"
             ]
         ]
     },
     {
-        "id": "73b730aa.ff429",
+        "id": "ceeabf77.e5e98",
         "type": "http request",
-        "z": "a338e4a3.c0ffd8",
+        "z": "aa9b9fd8.032af",
         "name": "",
         "method": "GET",
         "ret": "txt",
@@ -4232,36 +4225,36 @@
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 640,
-        "y": 140,
+        "x": 680,
+        "y": 100,
         "wires": [
             [
-                "9c30c26d.b2347"
+                "d0169561.926b58"
             ]
         ]
     },
     {
-        "id": "9c30c26d.b2347",
+        "id": "d0169561.926b58",
         "type": "function",
-        "z": "a338e4a3.c0ffd8",
+        "z": "aa9b9fd8.032af",
         "name": "",
         "func": "msg.text=\"テレビつけたよ！感謝しろよ！\";\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 430,
-        "y": 240,
+        "x": 470,
+        "y": 200,
         "wires": [
             [
-                "181f1bf0.191e74"
+                "1010ca1e.c9cdb6"
             ]
         ]
     },
     {
-        "id": "181f1bf0.191e74",
+        "id": "1010ca1e.c9cdb6",
         "type": "alexa-remote-routine",
-        "z": "a338e4a3.c0ffd8",
+        "z": "aa9b9fd8.032af",
         "name": "",
         "account": "318272e.dcf2b8e",
         "routineNode": {
@@ -4277,8 +4270,8 @@
                 ]
             }
         },
-        "x": 620,
-        "y": 240,
+        "x": 660,
+        "y": 200,
         "wires": [
             []
         ]
