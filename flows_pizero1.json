@@ -4182,5 +4182,98 @@
                 "79a3c8fc.5bac28"
             ]
         ]
+    },
+    {
+        "id": "ff993e1b.bdde2",
+        "type": "amazon-echo-device",
+        "z": "aa9b9fd8.032af",
+        "name": "TV",
+        "topic": "",
+        "x": 450,
+        "y": 220,
+        "wires": [
+            [
+                "cb3c88b4.259a78"
+            ]
+        ]
+    },
+    {
+        "id": "84311bf1.e55bc8",
+        "type": "amazon-echo-hub",
+        "z": "aa9b9fd8.032af",
+        "port": "80",
+        "processinput": 0,
+        "discovery": true,
+        "x": 240,
+        "y": 220,
+        "wires": [
+            [
+                "ff993e1b.bdde2"
+            ]
+        ]
+    },
+    {
+        "id": "cb3c88b4.259a78",
+        "type": "http request",
+        "z": "aa9b9fd8.032af",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://192.168.0.24:1880/tv/on",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 640,
+        "y": 220,
+        "wires": [
+            [
+                "fbe48930.695498"
+            ]
+        ]
+    },
+    {
+        "id": "fbe48930.695498",
+        "type": "function",
+        "z": "aa9b9fd8.032af",
+        "name": "",
+        "func": "msg.text=\"テレビつけたよ！感謝しろよ！\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 430,
+        "y": 320,
+        "wires": [
+            [
+                "95a7361f.ccb668"
+            ]
+        ]
+    },
+    {
+        "id": "95a7361f.ccb668",
+        "type": "alexa-remote-routine",
+        "z": "aa9b9fd8.032af",
+        "name": "",
+        "account": "318272e.dcf2b8e",
+        "routineNode": {
+            "type": "speak",
+            "payload": {
+                "type": "regular",
+                "text": {
+                    "type": "str",
+                    "value": ""
+                },
+                "devices": [
+                    "G090QU068017010B"
+                ]
+            }
+        },
+        "x": 620,
+        "y": 320,
+        "wires": [
+            []
+        ]
     }
 ]
