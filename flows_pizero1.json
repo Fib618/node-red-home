@@ -28,11 +28,6 @@
         "info": ""
     },
     {
-        "id": "271425b4.b584fa",
-        "type": "alexa-home-conf",
-        "username": "amaEcho"
-    },
-    {
         "id": "318272e.dcf2b8e",
         "type": "alexa-remote-account",
         "name": "",
@@ -47,6 +42,11 @@
         "userAgent": "",
         "useWsMqtt": "on",
         "autoInit": "on"
+    },
+    {
+        "id": "271425b4.b584fa",
+        "type": "alexa-home-conf",
+        "username": "amaEcho"
     },
     {
         "id": "b5190c15.9f4f6",
@@ -1685,40 +1685,6 @@
         "wires": [
             [
                 "79a3c8fc.5bac28"
-            ]
-        ]
-    },
-    {
-        "id": "1449e7fa.115bd8",
-        "type": "alexa-home",
-        "z": "957aa787.9c64e8",
-        "conf": "271425b4.b584fa",
-        "device": "102870",
-        "acknoledge": true,
-        "name": "PlayStation4",
-        "topic": "PlayStation4",
-        "x": 130,
-        "y": 60,
-        "wires": [
-            [
-                "ded6bae.58d1948"
-            ]
-        ]
-    },
-    {
-        "id": "1a9085cd.4ccaca",
-        "type": "alexa-home",
-        "z": "957aa787.9c64e8",
-        "conf": "271425b4.b584fa",
-        "device": "102871",
-        "acknoledge": true,
-        "name": "BRAVIA",
-        "topic": "BRAVIA",
-        "x": 110,
-        "y": 280,
-        "wires": [
-            [
-                "d0828e11.d559e"
             ]
         ]
     },
@@ -4184,35 +4150,6 @@
         ]
     },
     {
-        "id": "45197fa0.32f9e",
-        "type": "amazon-echo-device",
-        "z": "aa9b9fd8.032af",
-        "name": "TV123",
-        "topic": "",
-        "x": 490,
-        "y": 100,
-        "wires": [
-            [
-                "ceeabf77.e5e98"
-            ]
-        ]
-    },
-    {
-        "id": "16b5fb53.1035e5",
-        "type": "amazon-echo-hub",
-        "z": "aa9b9fd8.032af",
-        "port": "81",
-        "processinput": 0,
-        "discovery": true,
-        "x": 290,
-        "y": 100,
-        "wires": [
-            [
-                "45197fa0.32f9e"
-            ]
-        ]
-    },
-    {
         "id": "ceeabf77.e5e98",
         "type": "http request",
         "z": "aa9b9fd8.032af",
@@ -4252,6 +4189,35 @@
         ]
     },
     {
+        "id": "16b5fb53.1035e5",
+        "type": "amazon-echo-hub",
+        "z": "aa9b9fd8.032af",
+        "port": "80",
+        "processinput": 0,
+        "discovery": true,
+        "x": 290,
+        "y": 100,
+        "wires": [
+            [
+                "45197fa0.32f9e"
+            ]
+        ]
+    },
+    {
+        "id": "45197fa0.32f9e",
+        "type": "amazon-echo-device",
+        "z": "aa9b9fd8.032af",
+        "name": "TV123",
+        "topic": "",
+        "x": 490,
+        "y": 100,
+        "wires": [
+            [
+                "ceeabf77.e5e98"
+            ]
+        ]
+    },
+    {
         "id": "1010ca1e.c9cdb6",
         "type": "alexa-remote-routine",
         "z": "aa9b9fd8.032af",
@@ -4274,6 +4240,40 @@
         "y": 200,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "1449e7fa.115bd8",
+        "type": "alexa-home",
+        "z": "957aa787.9c64e8",
+        "conf": "271425b4.b584fa",
+        "device": "102870",
+        "acknoledge": true,
+        "name": "PlayStation4",
+        "topic": "PlayStation4",
+        "x": 130,
+        "y": 60,
+        "wires": [
+            [
+                "ded6bae.58d1948"
+            ]
+        ]
+    },
+    {
+        "id": "1a9085cd.4ccaca",
+        "type": "alexa-home",
+        "z": "957aa787.9c64e8",
+        "conf": "271425b4.b584fa",
+        "device": "102871",
+        "acknoledge": true,
+        "name": "BRAVIA",
+        "topic": "BRAVIA",
+        "x": 110,
+        "y": 280,
+        "wires": [
+            [
+                "d0828e11.d559e"
+            ]
         ]
     }
 ]
