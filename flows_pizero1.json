@@ -7,13 +7,6 @@
         "info": ""
     },
     {
-        "id": "ea374b70.7ba088",
-        "type": "tab",
-        "label": "BRAVIA API",
-        "disabled": false,
-        "info": ""
-    },
-    {
         "id": "7abc9db9.2af864",
         "type": "tab",
         "label": "PS4-WAKER",
@@ -21,7 +14,28 @@
         "info": ""
     },
     {
-        "id": "aa9b9fd8.032af",
+        "id": "ea374b70.7ba088",
+        "type": "tab",
+        "label": "BRAVIA API",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "33fb0bdd.db5af4",
+        "type": "tab",
+        "label": "PS4",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "4743094c.b311d8",
+        "type": "tab",
+        "label": "スマートホーム",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "2cfb5b77.6a1b7c",
         "type": "tab",
         "label": "フロー 1",
         "disabled": false,
@@ -47,6 +61,27 @@
         "id": "271425b4.b584fa",
         "type": "alexa-home-conf",
         "username": "amaEcho"
+    },
+    {
+        "id": "50bd1998.2b8d58",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
     },
     {
         "id": "b5190c15.9f4f6",
@@ -248,6 +283,8 @@
         "func": "msg.url = `http://${msg.displayip}/sony${msg.api.audio}`;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
         "x": 1440,
         "y": 180,
         "wires": [
@@ -822,6 +859,8 @@
         "func": "msg.url = `http://${msg.displayip}/sony${msg.api.appControl}`;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
         "x": 1460,
         "y": 340,
         "wires": [
@@ -1698,7 +1737,7 @@
         "console": false,
         "tostatus": false,
         "complete": "false",
-        "x": 670,
+        "x": 770,
         "y": 280,
         "wires": []
     },
@@ -1744,7 +1783,7 @@
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 470,
+        "x": 570,
         "y": 280,
         "wires": [
             [
@@ -1832,7 +1871,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 280,
+        "x": 380,
         "y": 280,
         "wires": [
             [
@@ -1851,7 +1890,7 @@
         "console": false,
         "tostatus": false,
         "complete": "false",
-        "x": 480,
+        "x": 570,
         "y": 360,
         "wires": []
     },
@@ -2751,7 +2790,7 @@
         "console": false,
         "tostatus": false,
         "complete": "false",
-        "x": 670,
+        "x": 770,
         "y": 60,
         "wires": []
     },
@@ -2762,13 +2801,13 @@
         "name": "",
         "method": "GET",
         "ret": "txt",
-        "paytoqs": true,
+        "paytoqs": "query",
         "url": "http://192.168.0.24:1880/ps4waker",
         "tls": "",
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 470,
+        "x": 570,
         "y": 60,
         "wires": [
             [
@@ -2809,7 +2848,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 280,
+        "x": 380,
         "y": 60,
         "wires": [
             [
@@ -2828,7 +2867,7 @@
         "console": false,
         "tostatus": false,
         "complete": "false",
-        "x": 480,
+        "x": 580,
         "y": 140,
         "wires": []
     },
@@ -2964,7 +3003,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 730,
+        "x": 740,
         "y": 740,
         "wires": [
             [
@@ -4150,99 +4189,6 @@
         ]
     },
     {
-        "id": "ceeabf77.e5e98",
-        "type": "http request",
-        "z": "aa9b9fd8.032af",
-        "name": "",
-        "method": "GET",
-        "ret": "txt",
-        "paytoqs": "ignore",
-        "url": "http://192.168.0.24:1880/tv/on",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "authType": "",
-        "x": 680,
-        "y": 100,
-        "wires": [
-            [
-                "d0169561.926b58"
-            ]
-        ]
-    },
-    {
-        "id": "d0169561.926b58",
-        "type": "function",
-        "z": "aa9b9fd8.032af",
-        "name": "",
-        "func": "msg.text=\"テレビつけたよ！感謝しろよ！\";\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 470,
-        "y": 200,
-        "wires": [
-            [
-                "1010ca1e.c9cdb6"
-            ]
-        ]
-    },
-    {
-        "id": "16b5fb53.1035e5",
-        "type": "amazon-echo-hub",
-        "z": "aa9b9fd8.032af",
-        "port": "80",
-        "processinput": 0,
-        "discovery": true,
-        "x": 290,
-        "y": 100,
-        "wires": [
-            [
-                "45197fa0.32f9e"
-            ]
-        ]
-    },
-    {
-        "id": "45197fa0.32f9e",
-        "type": "amazon-echo-device",
-        "z": "aa9b9fd8.032af",
-        "name": "TV123",
-        "topic": "",
-        "x": 490,
-        "y": 100,
-        "wires": [
-            [
-                "ceeabf77.e5e98"
-            ]
-        ]
-    },
-    {
-        "id": "1010ca1e.c9cdb6",
-        "type": "alexa-remote-routine",
-        "z": "aa9b9fd8.032af",
-        "name": "",
-        "account": "318272e.dcf2b8e",
-        "routineNode": {
-            "type": "speak",
-            "payload": {
-                "type": "regular",
-                "text": {
-                    "type": "str",
-                    "value": ""
-                },
-                "devices": [
-                    "G090QU068017010B"
-                ]
-            }
-        },
-        "x": 660,
-        "y": 200,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "1449e7fa.115bd8",
         "type": "alexa-home",
         "z": "957aa787.9c64e8",
@@ -4251,7 +4197,7 @@
         "acknoledge": true,
         "name": "PlayStation4",
         "topic": "PlayStation4",
-        "x": 130,
+        "x": 170,
         "y": 60,
         "wires": [
             [
@@ -4268,11 +4214,3903 @@
         "acknoledge": true,
         "name": "BRAVIA",
         "topic": "BRAVIA",
-        "x": 110,
+        "x": 150,
         "y": 280,
         "wires": [
             [
                 "d0828e11.d559e"
+            ]
+        ]
+    },
+    {
+        "id": "5c9fba4.bf88c44",
+        "type": "exec",
+        "z": "7abc9db9.2af864",
+        "command": "sudo ps4-waker",
+        "addpay": false,
+        "append": "standby",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "",
+        "x": 940,
+        "y": 860,
+        "wires": [
+            [
+                "d2f9e0fd.2f867"
+            ],
+            [
+                "1e4ea4c3.4cb7bb"
+            ],
+            [
+                "f8fd3c4e.4653f"
+            ]
+        ]
+    },
+    {
+        "id": "a9b10d66.1bc8c",
+        "type": "inject",
+        "z": "7abc9db9.2af864",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 700,
+        "y": 860,
+        "wires": [
+            [
+                "5c9fba4.bf88c44"
+            ]
+        ]
+    },
+    {
+        "id": "d2f9e0fd.2f867",
+        "type": "debug",
+        "z": "7abc9db9.2af864",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1210,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "371a611.1ebcc9e",
+        "type": "comment",
+        "z": "33fb0bdd.db5af4",
+        "name": "ステータス確認 \\n PS4起動 \\n PS4停止（スタンバイ）",
+        "info": "ステータス確認 \\n PS4起動 \\n PS4停止（スタンバイ）",
+        "x": 150,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "2283fa80.ce9fd6",
+        "type": "exec",
+        "z": "33fb0bdd.db5af4",
+        "command": "sudo ps4-waker",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "起動/停止",
+        "x": 780,
+        "y": 120,
+        "wires": [
+            [
+                "cc73e83a.53a788"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "5ca5979d.27de28",
+        "type": "http in",
+        "z": "33fb0bdd.db5af4",
+        "name": "",
+        "url": "/ps4",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 100,
+        "y": 160,
+        "wires": [
+            [
+                "22b59f5a.147cd"
+            ]
+        ]
+    },
+    {
+        "id": "3a2f111a.c0a57e",
+        "type": "switch",
+        "z": "33fb0bdd.db5af4",
+        "name": "コマンド確認",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "start",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "standby",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "check",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 4,
+        "x": 480,
+        "y": 160,
+        "wires": [
+            [
+                "1b6d5b7c.f3ff45"
+            ],
+            [
+                "2283fa80.ce9fd6"
+            ],
+            [
+                "80c8da16.8d1228"
+            ],
+            [
+                "6c155bfb.b4b494"
+            ]
+        ]
+    },
+    {
+        "id": "22b59f5a.147cd",
+        "type": "change",
+        "z": "33fb0bdd.db5af4",
+        "name": "コマンド取得",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.cmd",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 280,
+        "y": 160,
+        "wires": [
+            [
+                "3a2f111a.c0a57e"
+            ]
+        ]
+    },
+    {
+        "id": "1b6d5b7c.f3ff45",
+        "type": "change",
+        "z": "33fb0bdd.db5af4",
+        "name": "起動時は引数不要",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 80,
+        "wires": [
+            [
+                "2283fa80.ce9fd6"
+            ]
+        ]
+    },
+    {
+        "id": "cc73e83a.53a788",
+        "type": "http response",
+        "z": "33fb0bdd.db5af4",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1330,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "1e4ea4c3.4cb7bb",
+        "type": "debug",
+        "z": "7abc9db9.2af864",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1230,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "f8fd3c4e.4653f",
+        "type": "debug",
+        "z": "7abc9db9.2af864",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1230,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "80c8da16.8d1228",
+        "type": "exec",
+        "z": "33fb0bdd.db5af4",
+        "command": "sudo ps4-waker",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "チェック",
+        "x": 780,
+        "y": 180,
+        "wires": [
+            [
+                "2cfef7e1.b280b8"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "2cfef7e1.b280b8",
+        "type": "json",
+        "z": "33fb0bdd.db5af4",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 930,
+        "y": 160,
+        "wires": [
+            [
+                "c3857d2e.d848d"
+            ]
+        ]
+    },
+    {
+        "id": "c3857d2e.d848d",
+        "type": "change",
+        "z": "33fb0bdd.db5af4",
+        "name": "ステータス取得",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.status",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 200,
+        "wires": [
+            [
+                "cc73e83a.53a788"
+            ]
+        ]
+    },
+    {
+        "id": "6c155bfb.b4b494",
+        "type": "change",
+        "z": "33fb0bdd.db5af4",
+        "name": "エラー時",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "0",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 780,
+        "y": 240,
+        "wires": [
+            [
+                "cc73e83a.53a788"
+            ]
+        ]
+    },
+    {
+        "id": "81215a12.814938",
+        "type": "inject",
+        "z": "33fb0bdd.db5af4",
+        "name": "テスト(start)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"cmd\":\"start\"}",
+        "payloadType": "json",
+        "x": 170,
+        "y": 300,
+        "wires": [
+            [
+                "86b62d7f.fae5a"
+            ]
+        ]
+    },
+    {
+        "id": "32af926c.fd0f8e",
+        "type": "inject",
+        "z": "33fb0bdd.db5af4",
+        "name": "テスト(standby)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"cmd\":\"standby\"}",
+        "payloadType": "json",
+        "x": 180,
+        "y": 340,
+        "wires": [
+            [
+                "86b62d7f.fae5a"
+            ]
+        ]
+    },
+    {
+        "id": "309ef5c9.d5659a",
+        "type": "inject",
+        "z": "33fb0bdd.db5af4",
+        "name": "テスト(check)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"cmd\":\"check\"}",
+        "payloadType": "json",
+        "x": 170,
+        "y": 380,
+        "wires": [
+            [
+                "86b62d7f.fae5a"
+            ]
+        ]
+    },
+    {
+        "id": "df7249ba.a6ebc8",
+        "type": "inject",
+        "z": "33fb0bdd.db5af4",
+        "name": "テスト(Error)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"cmd\":\"error\"}",
+        "payloadType": "json",
+        "x": 170,
+        "y": 420,
+        "wires": [
+            [
+                "86b62d7f.fae5a"
+            ]
+        ]
+    },
+    {
+        "id": "86b62d7f.fae5a",
+        "type": "http request",
+        "z": "33fb0bdd.db5af4",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "query",
+        "url": "http://192.168.0.24:1880/ps4",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 430,
+        "y": 340,
+        "wires": [
+            [
+                "ce8c81cd.09495"
+            ]
+        ]
+    },
+    {
+        "id": "ce8c81cd.09495",
+        "type": "debug",
+        "z": "33fb0bdd.db5af4",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "b5c166be.b39a08",
+        "type": "function",
+        "z": "4743094c.b311d8",
+        "name": "テレビつけて",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 280,
+        "y": 80,
+        "wires": [
+            [
+                "4ad2093e.d742c8"
+            ]
+        ]
+    },
+    {
+        "id": "5ea4b1fd.a1ad5",
+        "type": "function",
+        "z": "4743094c.b311d8",
+        "name": "PS4つけて",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 270,
+        "y": 280,
+        "wires": [
+            [
+                "9be3bab0.8378d8",
+                "8eed060c.0ac3d8"
+            ]
+        ]
+    },
+    {
+        "id": "9be3bab0.8378d8",
+        "type": "function",
+        "z": "4743094c.b311d8",
+        "name": "テレビがついていなければつける",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 540,
+        "y": 280,
+        "wires": [
+            [
+                "91cb8b19.0867d8"
+            ]
+        ]
+    },
+    {
+        "id": "91cb8b19.0867d8",
+        "type": "function",
+        "z": "4743094c.b311d8",
+        "name": "テレビをHDMI1に切り替える",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 860,
+        "y": 280,
+        "wires": [
+            [
+                "d7b0b3c0.fde84"
+            ]
+        ]
+    },
+    {
+        "id": "8eed060c.0ac3d8",
+        "type": "function",
+        "z": "4743094c.b311d8",
+        "name": "PS4起動",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 460,
+        "y": 320,
+        "wires": [
+            [
+                "d7b0b3c0.fde84"
+            ]
+        ]
+    },
+    {
+        "id": "4ad2093e.d742c8",
+        "type": "function",
+        "z": "4743094c.b311d8",
+        "name": "テレビがついていなければつける",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 540,
+        "y": 80,
+        "wires": [
+            [
+                "3fb0c32a.d0e11c"
+            ]
+        ]
+    },
+    {
+        "id": "d7b0b3c0.fde84",
+        "type": "debug",
+        "z": "4743094c.b311d8",
+        "name": "終了",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1090,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "3fb0c32a.d0e11c",
+        "type": "debug",
+        "z": "4743094c.b311d8",
+        "name": "終了",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1090,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "d36e2b94.df8148",
+        "type": "function",
+        "z": "4743094c.b311d8",
+        "name": "テレビけして",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 280,
+        "y": 120,
+        "wires": [
+            [
+                "96e067eb.bda1a8",
+                "34663541.77ee5a"
+            ]
+        ]
+    },
+    {
+        "id": "96e067eb.bda1a8",
+        "type": "function",
+        "z": "4743094c.b311d8",
+        "name": "テレビがついていれば消す",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 520,
+        "y": 120,
+        "wires": [
+            [
+                "b281db9.5a9f128"
+            ]
+        ]
+    },
+    {
+        "id": "bec61ac1.e05808",
+        "type": "function",
+        "z": "4743094c.b311d8",
+        "name": "PS4消して",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 270,
+        "y": 360,
+        "wires": [
+            [
+                "103daf5a.37e811"
+            ]
+        ]
+    },
+    {
+        "id": "103daf5a.37e811",
+        "type": "function",
+        "z": "4743094c.b311d8",
+        "name": "PS4停止",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 460,
+        "y": 360,
+        "wires": [
+            [
+                "b728c729.e94e48"
+            ]
+        ]
+    },
+    {
+        "id": "b728c729.e94e48",
+        "type": "debug",
+        "z": "4743094c.b311d8",
+        "name": "終了",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1090,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "34663541.77ee5a",
+        "type": "function",
+        "z": "4743094c.b311d8",
+        "name": "PS4がついていれば消す",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 510,
+        "y": 160,
+        "wires": [
+            [
+                "b281db9.5a9f128"
+            ]
+        ]
+    },
+    {
+        "id": "b281db9.5a9f128",
+        "type": "debug",
+        "z": "4743094c.b311d8",
+        "name": "終了",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1090,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "5ac5ed6b.18c3a4",
+        "type": "http in",
+        "z": "4743094c.b311d8",
+        "name": "",
+        "url": "/smart-home",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 180,
+        "y": 680,
+        "wires": [
+            [
+                "d2fae056.c3b3e"
+            ]
+        ]
+    },
+    {
+        "id": "d2fae056.c3b3e",
+        "type": "switch",
+        "z": "4743094c.b311d8",
+        "name": "コマンド確認",
+        "property": "payload.cmd",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "tv_on",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "tv_off",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ps4_on",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "pw4_off",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 5,
+        "x": 400,
+        "y": 680,
+        "wires": [
+            [
+                "5a719cdd.7e9774"
+            ],
+            [
+                "f38b7a7b.3f3828",
+                "d59ca0b8.57297"
+            ],
+            [
+                "c013fcf9.d3612"
+            ],
+            [
+                "d59ca0b8.57297",
+                "5a719cdd.7e9774"
+            ],
+            [
+                "309460e3.52753"
+            ]
+        ]
+    },
+    {
+        "id": "5a719cdd.7e9774",
+        "type": "change",
+        "z": "4743094c.b311d8",
+        "name": "Power On(TV)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"method\":\"setPowerStatus\",\"id\":55,\"params\":[{\"status\":true}],\"version\":\"1.0\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 660,
+        "wires": [
+            [
+                "a4ba3443.2a3f78",
+                "e5486e74.c086c"
+            ]
+        ]
+    },
+    {
+        "id": "f38b7a7b.3f3828",
+        "type": "change",
+        "z": "4743094c.b311d8",
+        "name": "Power Off(TV)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"method\":\"setPowerStatus\",\"id\":55,\"params\":[{\"status\":false}],\"version\":\"1.0\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 620,
+        "wires": [
+            [
+                "a4ba3443.2a3f78",
+                "dc00300c.9b0fe"
+            ]
+        ]
+    },
+    {
+        "id": "5ae6e1e6.ddc02",
+        "type": "function",
+        "z": "4743094c.b311d8",
+        "name": "Set URL(system)",
+        "func": "msg.url = `http://${msg.displayip}/sony${msg.api.system}`;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 990,
+        "y": 640,
+        "wires": [
+            [
+                "aa5fae06.ba62c"
+            ]
+        ]
+    },
+    {
+        "id": "aa5fae06.ba62c",
+        "type": "http request",
+        "z": "4743094c.b311d8",
+        "name": "POST",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": false,
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 1150,
+        "y": 640,
+        "wires": [
+            [
+                "4c53d57a.8971fc"
+            ]
+        ]
+    },
+    {
+        "id": "4c53d57a.8971fc",
+        "type": "http response",
+        "z": "4743094c.b311d8",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1290,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "a4ba3443.2a3f78",
+        "type": "change",
+        "z": "4743094c.b311d8",
+        "name": "BraviaAPI",
+        "rules": [
+            {
+                "t": "set",
+                "p": "displayip",
+                "pt": "msg",
+                "to": "192.168.0.7",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "api",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "api.guide",
+                "pt": "msg",
+                "to": "/guide",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "api.appControl",
+                "pt": "msg",
+                "to": "/appControl",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "api.audio",
+                "pt": "msg",
+                "to": "/audio",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "api.avContent",
+                "pt": "msg",
+                "to": "/avContent",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "api.encryption",
+                "pt": "msg",
+                "to": "/encryption",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "api.system",
+                "pt": "msg",
+                "to": "/system",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "api.videoScreen",
+                "pt": "msg",
+                "to": "/videoScreen",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{\"X-Auth-PSK\":\"1122\"}",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 820,
+        "y": 640,
+        "wires": [
+            [
+                "5ae6e1e6.ddc02"
+            ]
+        ]
+    },
+    {
+        "id": "6df4dcd3.719f34",
+        "type": "change",
+        "z": "4743094c.b311d8",
+        "name": "PS4API",
+        "rules": [
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "http://192.168.0.24:1880/ps4",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 820,
+        "y": 720,
+        "wires": [
+            [
+                "eb61568b.e70b48"
+            ]
+        ]
+    },
+    {
+        "id": "c013fcf9.d3612",
+        "type": "change",
+        "z": "4743094c.b311d8",
+        "name": "Power On(PS4)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"cmd\":\"start\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 740,
+        "wires": [
+            [
+                "6df4dcd3.719f34",
+                "4d675c78.0ef0a4"
+            ]
+        ]
+    },
+    {
+        "id": "d59ca0b8.57297",
+        "type": "change",
+        "z": "4743094c.b311d8",
+        "name": "Power Off(PS4)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"cmd\":\"standby\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 700,
+        "wires": [
+            [
+                "6df4dcd3.719f34",
+                "fe385c4.6b4aaa"
+            ]
+        ]
+    },
+    {
+        "id": "eb61568b.e70b48",
+        "type": "http request",
+        "z": "4743094c.b311d8",
+        "name": "GET",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "query",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 1150,
+        "y": 720,
+        "wires": [
+            [
+                "e8239b8f.c992f8"
+            ]
+        ]
+    },
+    {
+        "id": "e8239b8f.c992f8",
+        "type": "http response",
+        "z": "4743094c.b311d8",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1290,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "69e68c64.c0e154",
+        "type": "switch",
+        "z": "957aa787.9c64e8",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "11",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "12",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 5,
+        "x": 390,
+        "y": 480,
+        "wires": [
+            [
+                "92e472a7.09364"
+            ],
+            [
+                "92e472a7.09364"
+            ],
+            [
+                "92e472a7.09364"
+            ],
+            [
+                "92e472a7.09364"
+            ],
+            [
+                "a81908de.04a0b8"
+            ]
+        ]
+    },
+    {
+        "id": "92e472a7.09364",
+        "type": "change",
+        "z": "957aa787.9c64e8",
+        "name": "設定",
+        "rules": [
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "http://192.168.0.24:1880/smart-home",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "cmd",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "payload.cmd",
+                "pt": "msg",
+                "to": "cmd",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 460,
+        "wires": [
+            [
+                "b05e2bf1.99bf08",
+                "4f20d65b.e8cbf8"
+            ]
+        ]
+    },
+    {
+        "id": "b05e2bf1.99bf08",
+        "type": "http request",
+        "z": "957aa787.9c64e8",
+        "name": "GET",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "query",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 690,
+        "y": 460,
+        "wires": [
+            [
+                "dfd1a853.7c7308"
+            ]
+        ]
+    },
+    {
+        "id": "dfd1a853.7c7308",
+        "type": "debug",
+        "z": "957aa787.9c64e8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 910,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "a81908de.04a0b8",
+        "type": "function",
+        "z": "957aa787.9c64e8",
+        "name": "無効なコマンド",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 580,
+        "y": 500,
+        "wires": [
+            [
+                "dfd1a853.7c7308"
+            ]
+        ]
+    },
+    {
+        "id": "dc00300c.9b0fe",
+        "type": "debug",
+        "z": "4743094c.b311d8",
+        "name": "TV_ON",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "e5486e74.c086c",
+        "type": "debug",
+        "z": "4743094c.b311d8",
+        "name": "TV_OFF",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "fe385c4.6b4aaa",
+        "type": "debug",
+        "z": "4743094c.b311d8",
+        "name": "PS4_ON",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "4d675c78.0ef0a4",
+        "type": "debug",
+        "z": "4743094c.b311d8",
+        "name": "PS4_OFF",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "4f20d65b.e8cbf8",
+        "type": "debug",
+        "z": "957aa787.9c64e8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "b9fc7367.b967e",
+        "type": "http response",
+        "z": "4743094c.b311d8",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1290,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "309460e3.52753",
+        "type": "change",
+        "z": "4743094c.b311d8",
+        "name": "Power On(PS4)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "ERROR",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 840,
+        "wires": [
+            [
+                "b9fc7367.b967e"
+            ]
+        ]
+    },
+    {
+        "id": "85408bed.59d36",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "http://192.168.0.7/sony/system",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{     \"method\": \"getCurrentTime\",     \"id\": 51,     \"params\": [],     \"version\": \"1.0\" }",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{\"X-Auth-PSK\":\"1122\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 80,
+        "wires": [
+            [
+                "d77fbf4e.d664f8"
+            ]
+        ]
+    },
+    {
+        "id": "16ee7bb3.6164ec",
+        "type": "inject",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 80,
+        "wires": [
+            [
+                "85408bed.59d36"
+            ]
+        ]
+    },
+    {
+        "id": "d77fbf4e.d664f8",
+        "type": "http request",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "body",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 520,
+        "y": 80,
+        "wires": [
+            [
+                "f4ab57cb.750c98"
+            ]
+        ]
+    },
+    {
+        "id": "f4ab57cb.750c98",
+        "type": "debug",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 710,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "9968f277.a5e958",
+        "type": "comment",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "SampleAPI",
+        "info": "",
+        "x": 130,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "c55ed627.3816e",
+        "type": "inject",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "手動実行",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "adc77368.1a55e8",
+        "type": "switch",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "ServiceSwitch",
+        "property": "service",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "guide",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "appControl",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "audio",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "avContent",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "encryption",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "system",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "videoScreen",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 8,
+        "x": 460,
+        "y": 760,
+        "wires": [
+            [
+                "a7514214.737648"
+            ],
+            [
+                "cb419ddf.1cc7b"
+            ],
+            [
+                "ccc211d0.4f239"
+            ],
+            [
+                "89a0341a.024308"
+            ],
+            [
+                "b0ccbc6f.40506"
+            ],
+            [
+                "409b06da.2f9d38"
+            ],
+            [
+                "3c716c05.355aa4"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "32853d2f.da3e3a",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "getSupportedApiInfo (v1.0)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"method\":\"getSupportedApiInfo\",\"id\":5,\"params\":[{\"services\":[\"guide\",\"appControl\",\"audio\",\"avContent\",\"encryption\",\"system\",\"videoScreen\"]}],\"version\":\"1.0\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1220,
+        "y": 220,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/guide/v1_0/getSupportedApiInfo/index.html](https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/guide/v1_0/getSupportedApiInfo/index.html)"
+    },
+    {
+        "id": "a7514214.737648",
+        "type": "function",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "guide",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 770,
+        "y": 240,
+        "wires": [
+            [
+                "32853d2f.da3e3a"
+            ]
+        ]
+    },
+    {
+        "id": "8bc07f17.002128",
+        "type": "http request",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "POST",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 1670,
+        "y": 1500,
+        "wires": [
+            [
+                "599a7090.c9d918",
+                "9526b186.66a6b8",
+                "425340d.df2ed4"
+            ]
+        ]
+    },
+    {
+        "id": "df7dc111.705fc",
+        "type": "inject",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "手動実行(guide)",
+        "props": [
+            {
+                "p": "service",
+                "v": "{\"service\":\"appControl\"}",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 140,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cb419ddf.1cc7b",
+        "type": "function",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "appControl",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 790,
+        "y": 280,
+        "wires": [
+            [
+                "22718ad4.6240ee"
+            ]
+        ]
+    },
+    {
+        "id": "f57f5f43.7e83a8",
+        "type": "inject",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "手動実行(appControl)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"service\":\"appControl\",\"api_id\":5}",
+        "payloadType": "json",
+        "x": 160,
+        "y": 340,
+        "wires": [
+            [
+                "cbc58f54.1cef1"
+            ]
+        ]
+    },
+    {
+        "id": "53c5412.c6c014",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "getApplicationList (v1.0)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"method\":\"getApplicationList\",\"id\":60,\"params\":[],\"version\":\"1.0\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1190,
+        "y": 260,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/appcontrol/v1_0/getApplicationList/index.html](https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/appcontrol/v1_0/getApplicationList/index.html)"
+    },
+    {
+        "id": "22718ad4.6240ee",
+        "type": "switch",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "API ID Switch",
+        "property": "api_id",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "3",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "4",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "5",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "6",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "7",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "8",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 9,
+        "x": 950,
+        "y": 320,
+        "wires": [
+            [
+                "53c5412.c6c014"
+            ],
+            [
+                "2381e19a.86c36e"
+            ],
+            [
+                "7fa5ee47.9348e"
+            ],
+            [
+                "1f58010.fdc167f"
+            ],
+            [
+                "372c5830.c72e68"
+            ],
+            [
+                "2f55aeb5.fa2f1a"
+            ],
+            [
+                "16b105c0.317c8a"
+            ],
+            [
+                "369d00ad.e3e618"
+            ],
+            [
+                "36b899fe.59a78e"
+            ]
+        ]
+    },
+    {
+        "id": "36b899fe.59a78e",
+        "type": "debug",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "cbc58f54.1cef1",
+        "type": "function",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "ParseParamater",
+        "func": "// パラメータを変数に格納\nmsg.service = msg.payload.service ? msg.payload.service : null;\nmsg.api_id = msg.payload.api_id ? msg.payload.api_id : null;\nmsg.isForm = msg.payload.isForm ? msg.payload.isForm : false;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 380,
+        "y": 260,
+        "wires": [
+            [
+                "5e85fe57.9402d"
+            ]
+        ]
+    },
+    {
+        "id": "5e85fe57.9402d",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "BRAVIA API",
+        "rules": [
+            {
+                "t": "set",
+                "p": "display_ip",
+                "pt": "msg",
+                "to": "192.168.0.7",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "http://display_ip/sony/api",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "url",
+                "pt": "msg",
+                "from": "display_ip",
+                "fromt": "str",
+                "to": "display_ip",
+                "tot": "msg"
+            },
+            {
+                "t": "change",
+                "p": "url",
+                "pt": "msg",
+                "from": "api",
+                "fromt": "str",
+                "to": "service",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{\"X-Auth-PSK\":\"1122\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 300,
+        "wires": [
+            [
+                "adc77368.1a55e8"
+            ]
+        ]
+    },
+    {
+        "id": "2381e19a.86c36e",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "getApplicationStatusList (v1.0)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"method\":\"getApplicationStatusList\",\"id\":55,\"params\":[],\"version\":\"1.0\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1210,
+        "y": 300,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/appcontrol/v1_0/getApplicationStatusList/index.html](https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/appcontrol/v1_0/getApplicationStatusList/index.html)"
+    },
+    {
+        "id": "a90bc0d1.8da4c8",
+        "type": "function",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "Error Message",
+        "func": "if (msg.payload.error){\n    switch (msg.payload.error[0]){\n        case 1:\n            msg.payload = \"A generic error code which can be used with any error.\"; \n            break;\n        case 2:\n            msg.payload = \"For cases when the server cannot reply in time.\"; \n            break;\n        case 3:\n            msg.payload = \"For cases when the “params” value in the request does not follow API specifications.\"; \n            break;\n        case 5:\n            msg.payload = \"For cases when the request body is empty, has no ID or has an invalid ID, has no method, has no params, or the params is not an array.\"; \n            break;\n        case 7:\n            msg.payload = \"For cases when the server cannot handle the request at this time.\"; \n            break;\n        case 12:\n            msg.payload = \"ForFor cases when the requested API does not exist.\"; \n            break;\n        case 14:\n            msg.payload = \"For cases when the requested version is not supported on the specified service.\"; \n            break;\n        case 15:\n            msg.payload = \"For cases when the server cannot handle the request with respect to the specified parameters.\"; \n            break;\n        default :\n            msg.payload = `error_code:${msg.payload.error[0]},Message:${msg.payload.error[1]}`;\n    }\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1920,
+        "y": 280,
+        "wires": [
+            [
+                "ea5ca8ba.1bfea"
+            ]
+        ]
+    },
+    {
+        "id": "599a7090.c9d918",
+        "type": "switch",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "ErrorHandler",
+        "property": "payload.error",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nempty"
+            },
+            {
+                "t": "empty"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 1730,
+        "y": 320,
+        "wires": [
+            [
+                "a90bc0d1.8da4c8"
+            ],
+            [
+                "ea5ca8ba.1bfea"
+            ],
+            [
+                "ea5ca8ba.1bfea"
+            ]
+        ]
+    },
+    {
+        "id": "7fa5ee47.9348e",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "getTextForm (v1.1)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"method\":\"getTextForm\",\"id\":60,\"params\":[{}],\"version\":\"1.1\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1170,
+        "y": 340,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/appcontrol/v1_1/getTextForm/index.html](https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/appcontrol/v1_1/getTextForm/index.html)"
+    },
+    {
+        "id": "9526b186.66a6b8",
+        "type": "debug",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1710,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "1f58010.fdc167f",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "getWebAppStatus (v1.0)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"method\":\"getWebAppStatus\",\"id\":1,\"params\":[],\"version\":\"1.0\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1190,
+        "y": 380,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/appcontrol/v1_0/getWebAppStatus/index.html](https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/appcontrol/v1_0/getWebAppStatus/index.html)"
+    },
+    {
+        "id": "372c5830.c72e68",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "setActiveApp (v1.0)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"method\":\"setActiveApp\",\"id\":601,\"params\":[{\"uri\":\"localapp://webappruntime?url=http%3A%2F%2Fexample.com%2F\"}],\"version\":\"1.0\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1170,
+        "y": 420,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "icon": "font-awesome/fa-hand-pointer-o",
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/appcontrol/v1_0/setActiveApp/index.html](https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/appcontrol/v1_0/setActiveApp/index.html)"
+    },
+    {
+        "id": "4192ab2b.969564",
+        "type": "http in",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "",
+        "url": "/input",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 180,
+        "wires": [
+            [
+                "f49d8eaf.0f9258"
+            ]
+        ]
+    },
+    {
+        "id": "90039fb0.d10cc",
+        "type": "http response",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 470,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "f49d8eaf.0f9258",
+        "type": "template",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "Input Form",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "html",
+        "syntax": "plain",
+        "template": "<html>\n\n<head>\n    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js\"></script>\n\n</head>\n\n<body>\n\n    <div class=\"result\"></div>\n    <form id=\"input\" method=\"GET\" action=\"bravia\">\n        <input type=\"hidden\" name=\"isForm\" value=\"true\" id=\"isForm\">\n        <p>\n            Service：<select name=\"service\" id=\"service\">\n                <option value=\"guide\">guide</option>\n                <option value=\"appControl\">appControl</option>\n                <option value=\"audio\">audio</option>\n                <option value=\"avContent\">avContent</option>\n                <option value=\"encryption\">encryption</option>\n                <option value=\"system\">system</option>\n                <option value=\"videoScreen\">videoScreen</option>\n            </select>\n        </p>\n        <p>\n            app_id : <input type=\"range\" value=\"1\" min=\"1\" max=\"20\" step=\"1\" name=\"api_id\" id=\"api_id\"\n                oninput=\"document.getElementById('api_val').value=this.value\">\n            <output id=\"api_val\">1</output>\n\n        </p>\n        <p>\n            <input type=\"submit\" value=\"送信\"><input type=\"reset\" value=\"リセット\">\n        </p>\n    </form>\n</body>\n\n</html>",
+        "output": "str",
+        "x": 290,
+        "y": 160,
+        "wires": [
+            [
+                "90039fb0.d10cc"
+            ]
+        ]
+    },
+    {
+        "id": "47dea5f3.8e08e4",
+        "type": "debug",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 350,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "bec40f39.d1787",
+        "type": "http in",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "",
+        "url": "/bravia",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 220,
+        "wires": [
+            [
+                "cbc58f54.1cef1",
+                "47dea5f3.8e08e4"
+            ]
+        ]
+    },
+    {
+        "id": "ea5ca8ba.1bfea",
+        "type": "switch",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "ResponseHandler",
+        "property": "isForm",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "true",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 2190,
+        "y": 340,
+        "wires": [
+            [
+                "b6f17ae1.a1a37"
+            ],
+            [
+                "fd8d2df4.23e1d8"
+            ]
+        ]
+    },
+    {
+        "id": "b6f17ae1.a1a37",
+        "type": "http response",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 2370,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "fd8d2df4.23e1d8",
+        "type": "debug",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2390,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "2f55aeb5.fa2f1a",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "setTextForm (v1.0)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"method\":\"setTextForm\",\"id\":601,\"params\":[\"hello world!!\"],\"version\":\"1.0\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1170,
+        "y": 460,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "icon": "font-awesome/fa-hand-pointer-o",
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/appcontrol/v1_0/setTextForm/index.html](https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/appcontrol/v1_0/setTextForm/index.html)"
+    },
+    {
+        "id": "16b105c0.317c8a",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "setTextForm (v1.1)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"method\":\"setTextForm\",\"id\":601,\"params\":[{\"encKey\":\"AAAAB3NzaC1yc2EAAAABIwAAAQEA3p6TmGYDRtnnmzckD5leg7lHIUY9cuV6vFvacew1uZ7Bmx2MF9a7SqmtiLDkLS3P9y9eobRjuWriSfgmqDPRFRU2mdwAmRm2aIvYa6WkzvnrfUhGR+SCT/Z62j7V9ps6Mt5HB8mFQj3494p4StTPVS1nFqvEUazEx13EJnJyHsdYqsV6UJV169e43oLSSccb3lr8BzeMUnGEfY+NKlAxDpEycr5jJYyTkLfrbX0lyAPs+vLwLRYhm+h2qJYAZUwknus4vD7aki4G69S+gnENClglh/e9ut9Q5BrtxiBQCEikn9V9rlnVkbp1eEUf89XFiHRWMVrRAINtJyQFvvoPOQ==\",\"text\":\"dtA6UNsMnahxCkfGdrc8AFhisnFZg8FnKTl7Sk4Wg9J8gYK8+Dv6Io7Ssef7ZPTo\"}],\"version\":\"1.1\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1170,
+        "y": 500,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "icon": "font-awesome/fa-hand-pointer-o",
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/appcontrol/v1_1/setTextForm/index.html](https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/appcontrol/v1_1/setTextForm/index.html)"
+    },
+    {
+        "id": "369d00ad.e3e618",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "terminateApps (v1.0)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"method\":\"terminateApps\",\"id\":55,\"params\":[],\"version\":\"1.0\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1180,
+        "y": 540,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "icon": "font-awesome/fa-exclamation"
+    },
+    {
+        "id": "971caf8d.a61218",
+        "type": "switch",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "API ID Switch",
+        "property": "api_id",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "3",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "4",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "5",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "6",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "7",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 8,
+        "x": 950,
+        "y": 660,
+        "wires": [
+            [
+                "45b80647.6064f"
+            ],
+            [
+                "e92e592c.a04ae"
+            ],
+            [
+                "7bdda785.8db47"
+            ],
+            [
+                "ccf319d6.96de7"
+            ],
+            [
+                "475dd5e5.c22f34"
+            ],
+            [
+                "25f9937.d81566c"
+            ],
+            [
+                "9b2c7f61.bf6748"
+            ],
+            [
+                "bbf43086.5f0e9"
+            ]
+        ]
+    },
+    {
+        "id": "45b80647.6064f",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "getSpeakerSettings (v1.0)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"method\":\"getSpeakerSettings\",\"id\":67,\"params\":[{\"target\":\"tvPosition\"}],\"version\":\"1.0\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1200,
+        "y": 600,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/audio/v1_0/getSpeakerSettings/index.html](https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/audio/v1_0/getSpeakerSettings/index.html)"
+    },
+    {
+        "id": "ccc211d0.4f239",
+        "type": "function",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "audio",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 770,
+        "y": 660,
+        "wires": [
+            [
+                "971caf8d.a61218"
+            ]
+        ]
+    },
+    {
+        "id": "425340d.df2ed4",
+        "type": "debug",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1730,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "e92e592c.a04ae",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "getVolumeInformation (v1.0)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"method\":\"getVolumeInformation\",\"id\":33,\"params\":[],\"version\":\"1.0\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1200,
+        "y": 640,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/audio/v1_0/getVolumeInformation/index.html](https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/audio/v1_0/getVolumeInformation/index.html)"
+    },
+    {
+        "id": "7bdda785.8db47",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "setAudioMute (v1.0)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"method\":\"setAudioMute\",\"id\":601,\"params\":[{\"status\":true}],\"version\":\"1.0\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1180,
+        "y": 680,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "icon": "font-awesome/fa-hand-pointer-o",
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/audio/v1_0/setAudioMute/index.html](https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/audio/v1_0/setAudioMute/index.html)"
+    },
+    {
+        "id": "ccf319d6.96de7",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "setAudioVolume (v1.0)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"method\":\"setAudioVolume\",\"id\":601,\"params\":[{\"volume\":\"18\",\"target\":\"speaker\"}],\"version\":\"1.0\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1180,
+        "y": 720,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "icon": "font-awesome/fa-hand-pointer-o",
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/audio/v1_0/setAudioVolume/index.html](https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/audio/v1_0/setAudioVolume/index.html)"
+    },
+    {
+        "id": "475dd5e5.c22f34",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "setAudioVolume (v1.2)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"method\":\"setAudioVolume\",\"id\":98,\"params\":[{\"volume\":\"5\",\"ui\":\"on\",\"target\":\"speaker\"}],\"version\":\"1.2\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1180,
+        "y": 760,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "icon": "font-awesome/fa-hand-pointer-o",
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/audio/v1_2/setAudioVolume/index.html](https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/audio/v1_2/setAudioVolume/index.html)"
+    },
+    {
+        "id": "25f9937.d81566c",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "setSoundSettings (v1.1)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"method\":\"setSoundSettings\",\"id\":5,\"params\":[{\"settings\":[{\"value\":\"speaker\",\"target\":\"outputTerminal\"}]}],\"version\":\"1.1\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1190,
+        "y": 800,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "icon": "font-awesome/fa-hand-pointer-o",
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/audio/v1_1/setSoundSettings/index.html](https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/audio/v1_1/setSoundSettings/index.html)"
+    },
+    {
+        "id": "9b2c7f61.bf6748",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "setSpeakerSettings (v1.0)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"method\":\"setSpeakerSettings\",\"id\":62,\"params\":[{\"settings\":[{\"value\":\"wallMount\",\"target\":\"tvPosition\"}]}],\"version\":\"1.0\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1200,
+        "y": 840,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "icon": "font-awesome/fa-hand-pointer-o",
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/audio/v1_0/setSpeakerSettings/index.html](https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/audio/v1_0/setSpeakerSettings/index.html)"
+    },
+    {
+        "id": "bbf43086.5f0e9",
+        "type": "debug",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "fc8e0a29.7ac588",
+        "type": "switch",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "API ID Switch",
+        "property": "api_id",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "3",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "4",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "5",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "6",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "7",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "8",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "9",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 10,
+        "x": 930,
+        "y": 1080,
+        "wires": [
+            [
+                "471ac685.209cd"
+            ],
+            [
+                "9d69ea58.abfb38"
+            ],
+            [
+                "9a8b142.f805ee8"
+            ],
+            [
+                "27080c14.10e46c"
+            ],
+            [
+                "8b48914d.7be978"
+            ],
+            [
+                "4e368649.a1acc8"
+            ],
+            [
+                "ca62d64e.059488"
+            ],
+            [
+                "69b4f61b.aba6e8"
+            ],
+            [
+                "7ec3b920.ef70d"
+            ],
+            [
+                "e94b595d.fa56c8"
+            ]
+        ]
+    },
+    {
+        "id": "e94b595d.fa56c8",
+        "type": "debug",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 910,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "89a0341a.024308",
+        "type": "function",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "avContent",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 770,
+        "y": 1060,
+        "wires": [
+            [
+                "fc8e0a29.7ac588"
+            ]
+        ]
+    },
+    {
+        "id": "471ac685.209cd",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "getContentCount (v1.0)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"method\":\"getContentCount\",\"id\":11,\"params\":[{\"source\":\"extInput:hdmi\"}],\"version\":\"1.0\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1190,
+        "y": 900,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/avcontent/v1_0/getContentCount/index.html](https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/avcontent/v1_0/getContentCount/index.html)"
+    },
+    {
+        "id": "9d69ea58.abfb38",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "getContentCount (v1.1)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"method\":\"getContentCount\",\"id\":11,\"params\":[{\"source\":\"extInput:hdmi\"}],\"version\":\"1.1\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1190,
+        "y": 940,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/avcontent/v1_1/getContentCount/index.html](https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/avcontent/v1_1/getContentCount/index.html)"
+    },
+    {
+        "id": "9a8b142.f805ee8",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "getContentList (v1.5)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"method\":\"getContentList\",\"id\":88,\"params\":[{\"stIdx\":0,\"cnt\":50,\"uri\":\"extInput:hdmi\"}],\"version\":\"1.5\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1200,
+        "y": 980,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/avcontent/v1_5/getContentList/index.html](https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/avcontent/v1_5/getContentList/index.html)"
+    },
+    {
+        "id": "27080c14.10e46c",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "getCurrentExternalInputsStatus (v1.0)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{     \"method\": \"getCurrentExternalInputsStatus\",     \"id\": 105,     \"params\": [],     \"version\": \"1.0\" }",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1230,
+        "y": 1020,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/avcontent/v1_0/getCurrentExternalInputsStatus/index.html](https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/avcontent/v1_0/getCurrentExternalInputsStatus/index.html)"
+    },
+    {
+        "id": "8b48914d.7be978",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "getSchemeList (v1.0)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{     \"method\": \"getSchemeList\",     \"id\": 1,     \"params\": [],     \"version\": \"1.0\" }",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1180,
+        "y": 1060,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/avcontent/v1_0/getSchemeList/index.html](https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/avcontent/v1_0/getSchemeList/index.html)"
+    },
+    {
+        "id": "ca62d64e.059488",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "getCurrentExternalInputsStatus (v1.1)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"method\":\"getCurrentExternalInputsStatus\",\"id\":105,\"params\":[],\"version\":\"1.1\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1250,
+        "y": 1140,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/avcontent/v1_1/getCurrentExternalInputsStatus/index.html](https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/avcontent/v1_1/getCurrentExternalInputsStatus/index.html)"
+    },
+    {
+        "id": "69b4f61b.aba6e8",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "getPlayingContentInfo (v1.0)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{     \"method\": \"getPlayingContentInfo\",     \"id\": 103,     \"params\": [],     \"version\": \"1.0\" }",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1200,
+        "y": 1180,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/avcontent/v1_0/getPlayingContentInfo/index.html](https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/avcontent/v1_0/getPlayingContentInfo/index.html)"
+    },
+    {
+        "id": "7ec3b920.ef70d",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "setPlayContent (v1.0)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"method\":\"setPlayContent\",\"id\":101,\"params\":[{\"uri\":\"tv:isdbt\"}],\"version\":\"1.0\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1180,
+        "y": 1220,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "icon": "font-awesome/fa-hand-pointer-o",
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/avcontent/v1_0/setPlayContent/index.html](https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/avcontent/v1_0/setPlayContent/index.html)"
+    },
+    {
+        "id": "4e368649.a1acc8",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "getSourceList (v1.0)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{     \"method\": \"getSourceList\",     \"id\": 1,     \"params\": [{\"scheme\": \"extInput\"}],     \"version\": \"1.0\" }",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1180,
+        "y": 1100,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/avcontent/v1_0/getSourceList/index.html](https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/avcontent/v1_0/getSourceList/index.html)"
+    },
+    {
+        "id": "b0ccbc6f.40506",
+        "type": "function",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "encryption",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 770,
+        "y": 1280,
+        "wires": [
+            [
+                "6166d930.7aade8"
+            ]
+        ]
+    },
+    {
+        "id": "6166d930.7aade8",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "getPublicKey (v1.0)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{     \"method\": \"getPublicKey\",     \"id\": 1,     \"params\": [],     \"version\": \"1.0\" }",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1170,
+        "y": 1280,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/encryption/v1_0/getPublicKey/index.html]()"
+    },
+    {
+        "id": "fc489c99.98a758",
+        "type": "switch",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "API ID Switch",
+        "property": "api_id",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "3",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "4",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "5",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "6",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "7",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "8",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "9",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "10",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "11",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "12",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "13",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "14",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "15",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "16",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "17",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 18,
+        "x": 890,
+        "y": 1720,
+        "wires": [
+            [
+                "e5d9c050.cad118"
+            ],
+            [
+                "46d75776.3fc8b"
+            ],
+            [
+                "97490000.57b3a"
+            ],
+            [
+                "9d64b56d.f452d8"
+            ],
+            [
+                "f8ec17c3.629df8"
+            ],
+            [
+                "e3ff7b6a.8ad3c8"
+            ],
+            [
+                "273bd78b.fae6"
+            ],
+            [
+                "699a7e04.e86c18"
+            ],
+            [
+                "3818bf54.3a0a08"
+            ],
+            [
+                "7890afd4.1cab5"
+            ],
+            [
+                "93875a1a.b87cb"
+            ],
+            [
+                "181592b5.b99ffd"
+            ],
+            [
+                "6e1f407c.a1935"
+            ],
+            [
+                "8e3d184d.231f08"
+            ],
+            [
+                "400b5a5a.b07534"
+            ],
+            [
+                "bcaf318f.01e2a8"
+            ],
+            [
+                "5e2c8e0f.f1d778"
+            ],
+            [
+                "9dfbe000.5c8678"
+            ]
+        ]
+    },
+    {
+        "id": "9dfbe000.5c8678",
+        "type": "debug",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 870,
+        "y": 1900,
+        "wires": []
+    },
+    {
+        "id": "409b06da.2f9d38",
+        "type": "function",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "system",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 740,
+        "y": 1460,
+        "wires": [
+            [
+                "fc489c99.98a758"
+            ]
+        ]
+    },
+    {
+        "id": "e5d9c050.cad118",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "getCurrentTime (v1.0)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{     \"method\": \"getCurrentTime\",     \"id\": 51,     \"params\": [],     \"version\": \"1.0\" }",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1180,
+        "y": 1340,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/system/v1_0/getCurrentTime/index.html](https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/system/v1_0/getCurrentTime/index.html)"
+    },
+    {
+        "id": "46d75776.3fc8b",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "getCurrentTime (v1.1)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{     \"method\": \"getCurrentTime\",     \"id\": 51,     \"params\": [],     \"version\": \"1.1\" }",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1180,
+        "y": 1380,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/system/v1_1/getCurrentTime/index.html](https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/system/v1_1/getCurrentTime/index.html)"
+    },
+    {
+        "id": "97490000.57b3a",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "getInterfaceInformation (v1.0)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{     \"method\": \"getInterfaceInformation\",     \"id\": 33,     \"params\": [],     \"version\": \"1.0\" }",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1210,
+        "y": 1420,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/system/v1_0/getInterfaceInformation/index.html](https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/system/v1_0/getInterfaceInformation/index.html)"
+    },
+    {
+        "id": "9d64b56d.f452d8",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "getLEDIndicatorStatus (v1.0)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{     \"method\": \"getLEDIndicatorStatus\",     \"id\": 45,     \"params\": [],     \"version\": \"1.0\" }",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1220,
+        "y": 1460,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/system/v1_0/getLEDIndicatorStatus/index.html](https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/system/v1_0/getLEDIndicatorStatus/index.html)"
+    },
+    {
+        "id": "f8ec17c3.629df8",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "getNetworkSettings (v1.0)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"method\":\"getNetworkSettings\",\"id\":2,\"params\":[{\"netif\":\"\"}],\"version\":\"1.0\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1190,
+        "y": 1500,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/system/v1_0/getNetworkSettings/index.html](https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/system/v1_0/getNetworkSettings/index.html)"
+    },
+    {
+        "id": "e3ff7b6a.8ad3c8",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "getPowerSavingMode (v1.0)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{     \"method\": \"getPowerSavingMode\",     \"id\": 51,     \"params\": [],     \"version\": \"1.0\" }",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1200,
+        "y": 1540,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/system/v1_0/getPowerSavingMode/index.html](https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/system/v1_0/getPowerSavingMode/index.html)"
+    },
+    {
+        "id": "273bd78b.fae6",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "getPowerStatus (v1.0)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{     \"method\": \"getPowerStatus\",     \"id\": 50,     \"params\": [],     \"version\": \"1.0\" }",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1180,
+        "y": 1580,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/system/v1_0/getPowerStatus/index.html](https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/system/v1_0/getPowerStatus/index.html)"
+    },
+    {
+        "id": "699a7e04.e86c18",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "getRemoteControllerInfo (v1.0)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{     \"method\": \"getRemoteControllerInfo\",     \"id\": 54,     \"params\": [],     \"version\": \"1.0\" }",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1210,
+        "y": 1620,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/system/v1_0/getRemoteControllerInfo/index.html](https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/system/v1_0/getRemoteControllerInfo/index.html)"
+    },
+    {
+        "id": "3818bf54.3a0a08",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "getRemoteDeviceSettings (v1.0)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"method\":\"getRemoteDeviceSettings\",\"id\":44,\"params\":[{\"target\":\"\"}],\"version\":\"1.0\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1240,
+        "y": 1660,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/system/v1_0/getRemoteDeviceSettings/index.html](https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/system/v1_0/getRemoteDeviceSettings/index.html)"
+    },
+    {
+        "id": "7890afd4.1cab5",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "getSystemInformation (v1.0)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{     \"method\": \"getSystemInformation\",     \"id\": 33,     \"params\": [],     \"version\": \"1.0\" }",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1200,
+        "y": 1700,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/system/v1_0/getSystemInformation/index.html](https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/system/v1_0/getSystemInformation/index.html)"
+    },
+    {
+        "id": "93875a1a.b87cb",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "getSystemSupportedFunction (v1.0)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"method\":\"getSystemSupportedFunction\",\"id\":55,\"params\":[],\"version\":\"1.0\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1230,
+        "y": 1740,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/system/v1_0/getSystemSupportedFunction/index.html](https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/system/v1_0/getSystemSupportedFunction/index.html)"
+    },
+    {
+        "id": "181592b5.b99ffd",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "getWolMode (v1.0)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{     \"method\": \"getWolMode\",     \"id\": 50,     \"params\": [],     \"version\": \"1.0\" }",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1170,
+        "y": 1780,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/system/v1_0/getWolMode/index.html](https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/system/v1_0/getWolMode/index.html)"
+    },
+    {
+        "id": "6e1f407c.a1935",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "requestReboot (v1.0)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{     \"method\": \"requestReboot\",     \"id\": 10,     \"params\": [],     \"version\": \"1.0\" }",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1180,
+        "y": 1820,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "icon": "node-red/alert.svg",
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/system/v1_0/requestReboot/index.html](https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/system/v1_0/requestReboot/index.html)"
+    },
+    {
+        "id": "8e3d184d.231f08",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "setLEDIndicatorStatus (v1.1)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{     \"method\": \"setLEDIndicatorStatus\",     \"id\": 53,     \"params\": [{         \"mode\": \"Demo\",         \"status\": \"true\"     }],     \"version\": \"1.1\" }",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1200,
+        "y": 1860,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "icon": "font-awesome/fa-hand-pointer-o",
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/system/v1_1/setLEDIndicatorStatus/index.html](https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/system/v1_1/setLEDIndicatorStatus/index.html)"
+    },
+    {
+        "id": "400b5a5a.b07534",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "setPowerSavingMode (v1.0)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"method\":\"setPowerSavingMode\",\"id\":52,\"params\":[{\"mode\":\"off\"}],\"version\":\"1.0\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1200,
+        "y": 1900,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "icon": "font-awesome/fa-hand-pointer-o",
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/system/v1_0/setPowerSavingMode/index.html](https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/system/v1_0/setPowerSavingMode/index.html)"
+    },
+    {
+        "id": "bcaf318f.01e2a8",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "setPowerStatus (v1.0)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{     \"method\": \"setPowerStatus\",     \"id\": 55,     \"params\": [{\"status\": false}],     \"version\": \"1.0\" }",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1180,
+        "y": 1940,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "icon": "font-awesome/fa-hand-pointer-o",
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/system/v1_0/setPowerStatus/index.html](https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/system/v1_0/setPowerStatus/index.html)"
+    },
+    {
+        "id": "5e2c8e0f.f1d778",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "setWolMode (v1.0)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"method\":\"setWolMode\",\"id\":55,\"params\":[{\"enabled\":false}],\"version\":\"1.0\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1170,
+        "y": 1980,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "icon": "font-awesome/fa-hand-pointer-o",
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/system/v1_0/setWolMode/index.html](https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/system/v1_0/setWolMode/index.html)"
+    },
+    {
+        "id": "3c716c05.355aa4",
+        "type": "function",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "videoScreen",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 730,
+        "y": 2020,
+        "wires": [
+            [
+                "bd581cc2.561fd"
+            ]
+        ]
+    },
+    {
+        "id": "bd581cc2.561fd",
+        "type": "change",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "setSceneSetting (v1.0)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"method\":\"setSceneSetting\",\"id\":40,\"params\":[{\"value\":\"auto\"}],\"version\":\"1.0\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1190,
+        "y": 2020,
+        "wires": [
+            [
+                "8bc07f17.002128"
+            ]
+        ],
+        "icon": "font-awesome/fa-hand-pointer-o",
+        "info": "[https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/videoscreen/v1_0/setSceneSetting/index.html](https://pro-bravia.sony.net/ja/develop/integrate/rest-api/spec/service/videoscreen/v1_0/setSceneSetting/index.html)"
+    },
+    {
+        "id": "ec7abb59.64c978",
+        "type": "http in",
+        "z": "2cfb5b77.6a1b7c",
+        "name": "",
+        "url": "/input",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 140,
+        "wires": [
+            [
+                "f49d8eaf.0f9258"
             ]
         ]
     }
