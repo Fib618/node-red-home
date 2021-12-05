@@ -8127,8 +8127,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 220,
-        "y": 820,
+        "x": 160,
+        "y": 1300,
         "wires": [
             [
                 "efd75ada.4d7cc8"
@@ -8154,8 +8154,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 630,
-        "y": 780,
+        "x": 570,
+        "y": 1260,
         "wires": [
             []
         ]
@@ -8170,8 +8170,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1020,
-        "y": 840,
+        "x": 960,
+        "y": 1320,
         "wires": [
             [
                 "8ebe6813.faf2a8"
@@ -8196,8 +8196,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 410,
-        "y": 820,
+        "x": 350,
+        "y": 1300,
         "wires": [
             [
                 "86b1bb2e.cecda8"
@@ -8221,8 +8221,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1200,
-        "y": 840,
+        "x": 1140,
+        "y": 1320,
         "wires": []
     },
     {
@@ -8286,8 +8286,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 660,
-        "y": 940,
+        "x": 600,
+        "y": 1420,
         "wires": [
             [
                 "3597abe5.23a3e4"
@@ -8345,8 +8345,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 890,
-        "y": 940,
+        "x": 830,
+        "y": 1420,
         "wires": [
             [
                 "4e4ededa.499ca"
@@ -8366,8 +8366,8 @@
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 1050,
-        "y": 940,
+        "x": 990,
+        "y": 1420,
         "wires": [
             [
                 "38048cdc.c3a644",
@@ -8394,8 +8394,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1220,
-        "y": 940,
+        "x": 1160,
+        "y": 1420,
         "wires": [
             [
                 "25e53cb5.32b734",
@@ -8423,8 +8423,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 590,
-        "y": 1000,
+        "x": 530,
+        "y": 1480,
         "wires": [
             [],
             []
@@ -8440,8 +8440,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 780,
-        "y": 880,
+        "x": 720,
+        "y": 1360,
         "wires": [
             []
         ]
@@ -8473,7 +8473,7 @@
         "to": "",
         "reg": false,
         "x": 820,
-        "y": 460,
+        "y": 580,
         "wires": [
             [
                 "f228e33f.11a698",
@@ -8508,11 +8508,10 @@
         "to": "",
         "reg": false,
         "x": 820,
-        "y": 500,
+        "y": 620,
         "wires": [
             [
-                "f228e33f.11a698",
-                "713f6fb8.10d07"
+                "f228e33f.11a698"
             ]
         ]
     },
@@ -8543,7 +8542,7 @@
         "to": "",
         "reg": false,
         "x": 830,
-        "y": 560,
+        "y": 680,
         "wires": [
             [
                 "f228e33f.11a698"
@@ -8577,7 +8576,7 @@
         "to": "",
         "reg": false,
         "x": 830,
-        "y": 600,
+        "y": 720,
         "wires": [
             [
                 "f228e33f.11a698"
@@ -8611,7 +8610,7 @@
         "to": "",
         "reg": false,
         "x": 850,
-        "y": 640,
+        "y": 760,
         "wires": [
             [
                 "f228e33f.11a698"
@@ -8630,7 +8629,7 @@
         "oldrc": false,
         "name": "",
         "x": 1180,
-        "y": 460,
+        "y": 580,
         "wires": [
             [
                 "3e7e687e.8a2d18"
@@ -8656,7 +8655,8 @@
         "y": 160,
         "wires": [
             [
-                "8df29f51.630fb"
+                "8df29f51.630fb",
+                "282f3eff.6edb22"
             ]
         ]
     },
@@ -8706,7 +8706,7 @@
         "repair": false,
         "outputs": 7,
         "x": 570,
-        "y": 500,
+        "y": 620,
         "wires": [
             [
                 "5c3791e3.3d07f"
@@ -8724,7 +8724,9 @@
                 "5f27a514.706534"
             ],
             [],
-            []
+            [
+                "22369c31.99e094"
+            ]
         ]
     },
     {
@@ -8740,7 +8742,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1410,
-        "y": 460,
+        "y": 580,
         "wires": []
     },
     {
@@ -8756,7 +8758,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1410,
-        "y": 500,
+        "y": 620,
         "wires": []
     },
     {
@@ -8772,7 +8774,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1410,
-        "y": 540,
+        "y": 660,
         "wires": []
     },
     {
@@ -8794,8 +8796,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 620,
-        "y": 700,
+        "x": 560,
+        "y": 1180,
         "wires": [
             []
         ],
@@ -9329,8 +9331,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 610,
-        "y": 820,
+        "x": 550,
+        "y": 1300,
         "wires": []
     },
     {
@@ -9346,8 +9348,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1240,
-        "y": 1020,
+        "x": 1180,
+        "y": 1500,
         "wires": []
     },
     {
@@ -9489,6 +9491,144 @@
         "statusType": "auto",
         "x": 510,
         "y": 340,
+        "wires": []
+    },
+    {
+        "id": "22369c31.99e094",
+        "type": "switch",
+        "z": "4743094c.b311d8",
+        "name": "コントローラ(31~)",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "31",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "32",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "33",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "34",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "35",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "36",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 7,
+        "x": 570,
+        "y": 960,
+        "wires": [
+            [
+                "f72fc6e3.e55998"
+            ],
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "a2675dc7.52ef6",
+        "type": "comment",
+        "z": "4743094c.b311d8",
+        "name": "テレビ操作",
+        "info": "",
+        "x": 540,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "14f2efca.908ea",
+        "type": "comment",
+        "z": "4743094c.b311d8",
+        "name": "PS4操作",
+        "info": "",
+        "x": 540,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "c4f78c6b.063c8",
+        "type": "comment",
+        "z": "4743094c.b311d8",
+        "name": "",
+        "info": "",
+        "x": 540,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "f72fc6e3.e55998",
+        "type": "change",
+        "z": "4743094c.b311d8",
+        "name": "PS4起動",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "message",
+                "pt": "msg",
+                "to": "リビングエアコン：冷房",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 780,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "282f3eff.6edb22",
+        "type": "debug",
+        "z": "4743094c.b311d8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 290,
+        "y": 420,
         "wires": []
     }
 ]
